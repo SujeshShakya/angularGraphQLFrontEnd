@@ -1,0 +1,178 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.left-menu{
+    margin: 25px 0 0 0;
+    padding: 0 0 0 25px;
+    border-top: 1px solid #DFE1E5;
+    text-align: left;
+    font-size: 14px;
+    color:#7F8FA4;
+}
+
+.left-menu a{
+        color: #7F8FA4;
+        text-decoration:none;
+        display:block;
+        position: relative;
+        font-weight:bold;
+        padding:0 0 5px 30px;
+        height: 35px;
+        line-height:34px;
+    }
+
+.left-menu a:hover{
+            color:#353C48;
+        }
+
+.left-menu a:hover:before{
+               height: 100%;
+               top:0;
+               bottom: 0;
+            }
+
+.left-menu a:before{
+            position: absolute;
+            content:"";
+            border:none;
+            left:-25px;
+            top:50%;
+            bottom:50%;
+            background: #1991EB;
+            width:5px;
+            height: 0%;
+            -webkit-transition:all ease-in-out 0.1s;
+            transition:all ease-in-out 0.1s;
+        }
+
+.left-menu__wrapper{
+        margin: 0; 
+        padding:0;
+        list-style:none;
+    }
+
+.left-menu__wrapper li{
+            margin:10px 0;
+            list-style:none;
+        }
+
+.left-menu__wrapper li.has-sub-menu ul{
+                    display: none;
+                }
+
+.left-menu__wrapper li.has-sub-menu:hover:after{
+                        border-color: darkGrey;
+                    }
+
+.left-menu__wrapper li.has-sub-menu:after{
+
+                    right:30px;
+                    top:7px;
+                    height: 16px;
+                    width:16px;
+                    line-height:13px;
+                    border:1px solid #C2CAD4;
+                    text-align:center;
+                    border-radius:50px;
+                }
+
+.left-menu__wrapper li.sub-menu--is-visible ul{
+                    display: block;
+                }
+
+.left-menu__wrapper li.sub-menu--is-visible:after{
+                    -webkit-transform:rotate(180deg);
+                            transform:rotate(180deg);
+                }
+
+.left-menu__heading{
+        font-size: 13px;
+        text-transform:uppercase;
+        margin: 15px 0;
+
+    }
+
+    .wrapper--dash-content{
+        margin:15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .overlay__wrapper{
+        position: relative; 
+        z-index: 1001;   
+    }
+
+.overlay__content{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top:0;
+        bottom:0;
+        background:rgba(127,143,164,0.5);
+        z-index: 1002;
+        display: none;
+    }
+
+.overlay__spinner{
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       z-index: 1003;
+       margin-top:-15px; 
+       margin-left:-15px; 
+   }
+
+.overlay--visible .overlay__content{
+         display: block;
+     }
+
+.overlay--visible .icon--loading{
+        position: relative;
+        top:5px;
+        -webkit-animation: loaderAnimation 1.25s infinite ease-in-out;
+                animation: loaderAnimation 1.25s infinite ease-in-out;  
+    }
+
+.wrap{
+    word-wrap: break-word;
+}
+
+.header__top-nav{
+    height: 75px;
+    line-height: 75px;        
+    border-bottom:1px solid #DFE1E5;
+    padding:0 30px;
+    color:#7F8FA4;
+}
+
+.header{
+    display: block;
+    background: #fff;
+}
+.dashboard__content-col{ 
+    -webkit-box-flex:1; 
+        -ms-flex:1; 
+            flex:1;
+}
+
+.dashboard__menu-col{
+    background: #fff;  
+    width:250px;
+    position: relative; 
+    border-right: 1px solid #DFE1E5; 
+    -webkit-box-shadow:0 -2px 4px #C2CAD4; 
+            box-shadow:0 -2px 4px #C2CAD4;        
+}
+
+
+.dashboard{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;    
+    min-height: 100vh;
+    
+}

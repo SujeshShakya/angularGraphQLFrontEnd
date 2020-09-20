@@ -1,0 +1,20 @@
+<div class="container">
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Apollo Client</a>
+    </nav>
+ 
+  
+
+<div class="left-menu">
+    <h2 class="left-menu__heading">Contributers</h2>
+    <ul class="left-menu__wrapper">
+      <li *ngFor="let commenter of commenters | async">
+        <a href="#" (click)='gotoDetails($event)'>
+          <span class="icon icon--home left-menu__icon"></span>
+          <span class="left-menu__text">{{commenter.value}}</span>
+          <span class="left-menu__alert">4</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>

@@ -1,0 +1,27 @@
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
+import { FindComponent } from "./find/find.component";
+import { ListComponent } from "./list/list.component";
+import { DashboardComponent } from "./dashboard/dashboard/dashboard.component";
+import { ContentComponent } from "./dashboard/content/content.component";
+
+const routes: Routes = [
+  
+  { path: "find", component: FindComponent },
+  { path: "", component: DashboardComponent,
+children: [
+  {
+    path: 'content/:content',
+    component: ContentComponent,
+  }
+]
+},
+  { path: "**", redirectTo: "/", pathMatch: "full" }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

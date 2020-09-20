@@ -1,0 +1,14 @@
+
+<div class="container">
+  <nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Apollo Client for Angular -Sample Application</a>
+  </nav>
+<div *ngFor="let commenter of commenters | async">
+  <div class="card" style="width:200%; margin-top:20px">
+    <div class="card-body">
+    <h5 class="card-title">
+      <a href="#" (click)="gotoDetails($event)" id={{commenter.value}}>{{commenter.value}}</a> 
+    </h5>      
+    </div>
+  </div>
+</div>
